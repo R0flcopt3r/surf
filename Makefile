@@ -73,5 +73,7 @@ uninstall:
 	rm -f $(DESTDIR)$(LIBDIR)/libsurf-webext.so
 	- rmdir $(DESTDIR)$(LIBDIR)
 
+recomp: distclean clean install
+
 .SUFFIXES: .so .o .c
 .PHONY: all options clean-dist clean dist install uninstall

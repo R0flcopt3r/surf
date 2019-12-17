@@ -10,7 +10,7 @@ static char *cachedir          = "~/.cache/surf/";
 static char *cookiefile        = "~/.local/share/surf/cookies.txt";
 static char *urihistoryfile    = "~/.local/share/surf/uri-history.txt";
 static char *searchhistoryfile = "~/.local/share/surf/search-history.txt";
-static char *downloaddir       = "~/Nedlastinger/";
+static char *downloaddir       = "~/Downloads/";
 static char *searchurl         = "https://duckduckgo.com/?q=%s";
 
 /* Webkit default features */
@@ -31,7 +31,7 @@ static Parameter defconfig[ParameterLast] = {
 	[DiskCache]           =       { { .i = 1 },     },
 	[DNSPrefetch]         =       { { .i = 0 },     },
 	[FileURLsCrossAccess] =       { { .i = 0 },     },
-	[FontSize]            =       { { .i = 12 },    },
+	[FontSize]            =       { { .i = 16 },    },
 	[FrameFlattening]     =       { { .i = 0 },     },
 	[Geolocation]         =       { { .i = 0 },     },
 	[HideBackground]      =       { { .i = 0 },     },
@@ -52,7 +52,7 @@ static Parameter defconfig[ParameterLast] = {
 	[SpellLanguages]      =       { { .v = ((char *[]){ "en_US", NULL }) }, },
 	[StrictTLS]           =       { { .i = 1 },     },
 	[Style]               =       { { .i = 1 },     },
-	[WebGL]               =       { { .i = 0 },     },
+	[WebGL]               =       { { .i = 1 },     },
 	[ZoomLevel]           =       { { .f = 1.0 },   },
 };
 
@@ -145,7 +145,7 @@ static SiteSpecific certs[] = {
 	{ "://suckless\\.org/", "suckless.org.crt" },
 };
 
-#define MODKEY GDK_CONTROL_MASK
+#define MODKEY GDK_MOD1_MASK
 
 /* hotkeys */
 /*
@@ -173,8 +173,8 @@ static Key keys[] = {
 	/* vertical and horizontal scrolling, in viewport percentage */
 	{ MODKEY,                GDK_KEY_j,      scrollv,    { .i = +10 } },
 	{ MODKEY,                GDK_KEY_k,      scrollv,    { .i = -10 } },
-	{ MODKEY,                GDK_KEY_f,      scrollv,    { .i = +50 } },
-	{ MODKEY,                GDK_KEY_b,      scrollv,    { .i = -50 } },
+	{ MODKEY,                GDK_KEY_d,      scrollv,    { .i = +50 } },
+	{ MODKEY,                GDK_KEY_u,      scrollv,    { .i = -50 } },
 	{ MODKEY,                GDK_KEY_l,      scrollh,    { .i = +10 } },
 	{ MODKEY,                GDK_KEY_h,      scrollh,    { .i = -10 } },
 
